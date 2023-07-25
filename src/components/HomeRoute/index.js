@@ -11,7 +11,6 @@ import SideBar from '../SideBar'
 import {
   BackgroundContainer,
   ContentContainer,
-  SideBarContainer,
   VideosSectionContainer,
   BannerSectionContainer,
   BannerLogo,
@@ -183,7 +182,9 @@ class HomeRoute extends Component {
             <OtherCasePara isDarkMode={isDarkMode}>
               Try different key words or remove search filter
             </OtherCasePara>
-            <OtherCaseButton type="button">Retry</OtherCaseButton>
+            <OtherCaseButton type="button" onClick={this.getData}>
+              Retry
+            </OtherCaseButton>
           </OtherCaseContainer>
         )
       }}
@@ -315,9 +316,7 @@ class HomeRoute extends Component {
           <>
             <Header />
             <ContentContainer>
-              <SideBarContainer>
-                <SideBar />
-              </SideBarContainer>
+              <SideBar />
               <VideosSectionContainer>
                 {this.renderBannerSection()}
                 <VideoSection isDarkMode={isDarkMode}>

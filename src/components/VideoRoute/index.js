@@ -13,7 +13,6 @@ import SideBar from '../SideBar'
 import {
   BackgroundContainer,
   ContentContainer,
-  SideBarContainer,
   VideoContainer,
   VideoContentContainer,
   OtherCaseContainer,
@@ -31,7 +30,6 @@ import {
   LikeVideoIconButton,
   DislikeVideoIconButton,
   SaveVideoIconButton,
-  IconPara,
   ChannelInfoContainer,
   ChannelLogo,
   ChannelInfoContent,
@@ -155,9 +153,14 @@ class VideoRoute extends Component {
       description,
       publishedAt,
     } = videoObj
-    const publishedAgo = formatDistanceToNow(new Date(publishedAt))
-      .split(' ')
-      .slice(1)
+
+    let postedAt = formatDistanceToNow(new Date(publishedAt))
+    const postedAtList = postedAt.split(' ')
+
+    if (postedAtList.length === 3) {
+      postedAtList.shift()
+      postedAt = postedAtList.join(' ')
+    }
     return (
       <NxtWatchAppContext.Consumer>
         {value => {
@@ -178,14 +181,19 @@ class VideoRoute extends Component {
 
           return (
             <VideoContainer isDarkMode={isDarkMode}>
-              <ReactPlayer url={videoUrl} width="100%" />
+              <ReactPlayer
+                url={videoUrl}
+                width="100%"
+                height="400px"
+                controls
+              />
               <VideoContentContainer>
                 <TitleText isDarkMode={isDarkMode}>{title}</TitleText>
                 <VideoInfoContainer isDarkMode={isDarkMode}>
                   <VideoLikeViewsContainer isDarkMode={isDarkMode}>
                     <VideoInfoPara>{viewCount} views</VideoInfoPara>
                     <BsDot />
-                    <VideoInfoPara>{publishedAgo.join(' ')} ago</VideoInfoPara>
+                    <VideoInfoPara>{postedAt} ago</VideoInfoPara>
                   </VideoLikeViewsContainer>
                   <VideoIconsContainer>
                     <VideoIconitem>
@@ -195,8 +203,7 @@ class VideoRoute extends Component {
                         onClick={this.onChangeLikeStatus}
                         isLike={isLike}
                       >
-                        <BiLike />
-                        <IconPara>Like</IconPara>
+                        <BiLike /> Like
                       </LikeVideoIconButton>
                     </VideoIconitem>
                     <VideoIconitem>
@@ -206,8 +213,7 @@ class VideoRoute extends Component {
                         onClick={this.onChangeDislikeStatus}
                         isDislike={isDislike}
                       >
-                        <BiDislike />
-                        <IconPara>Dislike</IconPara>
+                        <BiDislike /> Dislike
                       </DislikeVideoIconButton>
                     </VideoIconitem>
 
@@ -218,8 +224,7 @@ class VideoRoute extends Component {
                         isSave={isSave}
                         onClick={onClickSaveButton}
                       >
-                        <RiMenuAddLine />
-                        <IconPara>{isSave ? 'Saved' : 'Save'}</IconPara>
+                        <RiMenuAddLine /> {isSave ? 'Saved' : 'Save'}
                       </SaveVideoIconButton>
                     </VideoIconitem>
                   </VideoIconsContainer>
@@ -274,9 +279,7 @@ class VideoRoute extends Component {
             >
               <Header />
               <ContentContainer>
-                <SideBarContainer>
-                  <SideBar />
-                </SideBarContainer>
+                <SideBar />
                 {this.renderAllViews()}
               </ContentContainer>
             </BackgroundContainer>

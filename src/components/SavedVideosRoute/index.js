@@ -9,7 +9,6 @@ import TabVideoCardItem from '../TabVideoCardItem'
 import {
   BackgroundContainer,
   ContentContainer,
-  SideBarContainer,
   SuccessViewContainer,
   AllVideosContainer,
   OtherCaseContainer,
@@ -100,9 +99,7 @@ class SavedVideosRoute extends Component {
             >
               <Header />
               <ContentContainer>
-                <SideBarContainer>
-                  <SideBar />
-                </SideBarContainer>
+                <SideBar />
                 {this.renderAllViews()}
               </ContentContainer>
             </BackgroundContainer>

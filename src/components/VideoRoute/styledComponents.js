@@ -4,7 +4,6 @@ export const BackgroundContainer = styled.div`
   display: flex;
   flex-direction: column;
   width: 100%;
-  height: 100vh;
   background-color: ${props => (props.isDarkMode ? '#0f0f0f' : '#f9f9f9')};
 `
 export const ContentContainer = styled.div`
@@ -14,24 +13,15 @@ export const ContentContainer = styled.div`
   flex-grow: 1;
 `
 
-export const SideBarContainer = styled.div`
-  display: flex;
-  flex-direction: column;
-  width: 30%;
-  @media screen and (max-width: 767px) {
-    display: none;
-  }
-`
-
 export const VideoContainer = styled.div`
-  width: 100%;
-  height: 30vh;
+  width: 80%;
   display: flex;
+  padding: 10px;
   flex-direction: column;
   background-color: ${props => (props.isDarkMode ? '#181818' : '#f1f1f1')};
-  margin-left: -6%;
   @media screen and (max-width: 767px) {
     margin-left: 0px;
+    width: 100%;
   }
 `
 export const VideoContentContainer = styled.div`
@@ -106,10 +96,6 @@ export const DislikeVideoIconButton = styled(VideoIconButton)`
 export const SaveVideoIconButton = styled(VideoIconButton)`
   color: ${props => props.isSave && '#2563eb'};
 `
-export const IconPara = styled.p`
-  font-weight: 600;
-  margin-left: 6px;
-`
 
 export const ChannelInfoContainer = styled.div`
   display: flex;
@@ -150,8 +136,10 @@ export const OtherCaseContainer = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
+  width: 80%;
   padding: 20px;
   text-align: center;
+  background-color: ${props => (props.isDarkMode ? '#0f0f0f' : '#f9f9f9')};
 `
 
 export const OtherCaseImage = styled.img`
@@ -178,12 +166,19 @@ export const OtherCaseButton = styled.button`
   outline: none;
   background-color: #3b82f6;
   border-radius: 10px;
+  @media screen and (max-width: 767px) {
+    width: 100%;
+  }
 `
 export const LoaderContainer = styled.div`
   color: #4f46e5;
-  width: 100%;
+  width: 80%;
   height: 50vh;
   display: flex;
   align-items: center;
   justify-content: center;
+  background-color: ${props => (props.isDarkMode ? '#0f0f0f' : '#f9f9f9')};
+  @media screen and (max-width: 767px) {
+    width: 100%;
+  }
 `

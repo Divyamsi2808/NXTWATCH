@@ -11,7 +11,6 @@ import TabVideoCardItem from '../TabVideoCardItem'
 import {
   BackgroundContainer,
   ContentContainer,
-  SideBarContainer,
   SuccessViewContainer,
   AllVideosContainer,
   OtherCaseContainer,
@@ -167,9 +166,7 @@ class TrendsRoute extends Component {
             <BackgroundContainer isDarkMode={isDarkMode} data-testid="trending">
               <Header />
               <ContentContainer>
-                <SideBarContainer>
-                  <SideBar />
-                </SideBarContainer>
+                <SideBar />
                 {this.renderAllViews()}
               </ContentContainer>
             </BackgroundContainer>

@@ -10,7 +10,6 @@ import TabBannerSection from '../TabBannerSection'
 import {
   BackgroundContainer,
   ContentContainer,
-  SideBarContainer,
   SuccessViewContainer,
   AllVideosContainer,
   OtherCaseContainer,
@@ -181,9 +180,7 @@ class GamingVideosRoute extends Component {
             <BackgroundContainer isDarkMode={isDarkMode} data-testid="gaming">
               <Header />
               <ContentContainer>
-                <SideBarContainer>
-                  <SideBar />
-                </SideBarContainer>
+                <SideBar />
                 {this.renderAllViews()}
               </ContentContainer>
             </BackgroundContainer>

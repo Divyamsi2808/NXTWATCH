@@ -1,9 +1,12 @@
-import {GrFormClose} from 'react-icons/gr'
 import TabOptions from '../TabOptions'
 
 import NxtWatchAppContext from '../../NxtWatchAppContext'
 
-import {PopupMenuContainer, CloseButton} from './styledComponents'
+import {
+  PopupMenuContainer,
+  CloseButton,
+  GrFormCloseIcon,
+} from './styledComponents'
 
 const RenderPopupMenu = props => {
   const {close} = props
@@ -16,7 +19,7 @@ const RenderPopupMenu = props => {
         return (
           <PopupMenuContainer isDarkMode={isDarkMode}>
             <CloseButton type="button" onClick={close} isDarkMode={isDarkMode}>
-              <GrFormClose />
+              <GrFormCloseIcon isDarkMode={isDarkMode} />
             </CloseButton>
             <TabOptions />
           </PopupMenuContainer>

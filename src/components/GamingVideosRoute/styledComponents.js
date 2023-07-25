@@ -14,28 +14,19 @@ export const ContentContainer = styled.div`
   flex-grow: 1;
 `
 
-export const SideBarContainer = styled.div`
-  display: flex;
-  flex-direction: column;
-  width: 40%;
-  @media screen and (max-width: 767px) {
-    display: none;
-  }
-`
-
 export const SuccessViewContainer = styled.div`
   flex-grow: 1;
-  height: 120vh;
-  width: 100%;
+  width: 80%;
   background-color: black;
-  @media screen and (min-width: 768px) {
-    margin-left: -8%;
+  @media screen and (max-width: 767px) {
+    width: 100%;
   }
 `
 
 export const AllVideosContainer = styled.ul`
   list-style: none;
   flex-grow: 1;
+  height: 100vh;
   display: flex;
   justify-content: space-evenly;
   flex-wrap: wrap;
@@ -52,6 +43,7 @@ export const OtherCaseContainer = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
+  width: 80%;
   padding: 20px;
   text-align: center;
 `
@@ -80,14 +72,20 @@ export const OtherCaseButton = styled.button`
   outline: none;
   background-color: #3b82f6;
   border-radius: 10px;
+  @media screen and (max-width: 767px) {
+    width: 100%;
+  }
 `
 export const LoaderContainer = styled.div`
   color: #4f46e5;
-  width: 100%;
+  width: 80%;
   height: 50vh;
   display: flex;
   align-items: center;
   justify-content: center;
+  @media screen and (max-width: 767px) {
+    width: 100%;
+  }
 `
 
 export const LinkElement = styled(Link)`

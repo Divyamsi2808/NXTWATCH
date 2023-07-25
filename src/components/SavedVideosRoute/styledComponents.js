@@ -13,28 +13,18 @@ export const ContentContainer = styled.div`
   flex-grow: 1;
 `
 
-export const SideBarContainer = styled.div`
-  display: flex;
-  flex-direction: column;
-  width: 40%;
-  @media screen and (max-width: 767px) {
-    display: none;
-  }
-`
-
 export const SuccessViewContainer = styled.div`
-  flex-grow: 1;
-  height: 120vh;
-  width: 100%;
+  width: 80%;
   background-color: black;
-  @media screen and (min-width: 768px) {
-    margin-left: -10%;
+  @media screen and (max-width: 767px) {
+    width: 100%;
   }
 `
 
 export const AllVideosContainer = styled.ul`
   list-style: none;
   margin-top: 0px;
+  height: 100vh;
   flex-grow: 1;
   display: flex;
   flex-direction: column;
@@ -53,7 +43,10 @@ export const OtherCaseContainer = styled.div`
   padding: 20px;
   text-align: center;
   height: 100vh;
-  width: 60%;
+  width: 80%;
+  @media screen and (max-width: 767px) {
+    width: 100%;
+  }
 `
 
 export const OtherCaseImage = styled.img`

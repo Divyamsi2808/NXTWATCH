@@ -10,16 +10,16 @@ export const BackgroundContainer = styled.div`
 export const ContentContainer = styled.div`
   display: flex;
   width: 100%;
-  height: 120vh;
   flex-grow: 1;
 `
 
-export const SideBarContainer = styled.div`
+export const VideosSectionContainer = styled.li`
   display: flex;
   flex-direction: column;
-  width: 40%;
+  width: 80%;
+  padding: 10px;
   @media screen and (max-width: 767px) {
-    display: none;
+    width: 100%;
   }
 `
 
@@ -27,18 +27,6 @@ export const VideoSection = styled.div`
   flex-grow: 1;
   background-color: ${props => (props.isDarkMode ? '#0f0f0f' : '#f1f1f1')};
   padding: 10px;
-  width: 100%;
-`
-
-export const VideosSectionContainer = styled.li`
-  display: flex;
-  flex-direction: column;
-  flex-grow: 1;
-  width: 100%;
-  padding: 10px;
-  @media screen and (min-width: 768px) {
-    margin-left: -4%;
-  }
 `
 
 export const BannerSectionContainer = styled.div`
@@ -51,9 +39,6 @@ export const BannerSectionContainer = styled.div`
   background-size: cover;
   box-shadow: 1px 1px 4px 4px #439793;
   margin-bottom: 10px;
-  @media screen and (max-width: 767px) {
-    width: 100%;
-  }
 `
 
 export const BannerLogo = styled.img`
@@ -236,6 +221,9 @@ export const OtherCaseButton = styled.button`
   outline: none;
   background-color: #3b82f6;
   border-radius: 10px;
+  @media screen and (max-width: 767px) {
+    width: 100%;
+  }
 `
 export const LoaderContainer = styled.div`
   color: #4f46e5;
@@ -244,4 +232,7 @@ export const LoaderContainer = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
+  @media screen and (max-width: 767px) {
+    width: 100%;
+  }
 `

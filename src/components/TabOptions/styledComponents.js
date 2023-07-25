@@ -11,6 +11,7 @@ export const OptionItem = styled.li`
   display: flex;
   align-items: center;
   padding-left: 10px;
+  padding-right: 10px;
   width: 100%;
   background-color: ${props => {
     switch (true) {

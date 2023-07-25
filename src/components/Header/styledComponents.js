@@ -7,6 +7,8 @@ export const HeaderForLargeDevices = styled.div`
   padding: 15px;
   width: 100%;
   background-color: ${props => (props.isDarkMode ? '#231f20' : '#ffffff')};
+  border-bottom: 3px solid
+    ${props => (props.isDarkMode ? '#f9f9f9' : '#181818')};
   @media screen and (max-width: 767px) {
     display: none;
   }
