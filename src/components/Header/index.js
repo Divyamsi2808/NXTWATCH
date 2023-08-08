@@ -1,8 +1,7 @@
 import Cookie from 'js-cookie'
 import {Link, withRouter} from 'react-router-dom'
-import {BsSun} from 'react-icons/bs'
 import {FaMoon} from 'react-icons/fa'
-import {BiMenu, BiExit} from 'react-icons/bi'
+import {BiMenu, BiExit, BiSun} from 'react-icons/bi'
 import NxtWatchAppContext from '../../NxtWatchAppContext'
 import RenderPopupMenu from '../TabOptionsPopup'
 
@@ -116,7 +115,7 @@ const Header = props => {
                 onClick={onChangeDarkMode}
                 data-testid="theme"
               >
-                {isDarkMode ? <BsSun /> : <FaMoon />}
+                {isDarkMode ? <BiSun /> : <FaMoon />}
               </DarkModeButton>
               {renderPopupMenu()}
               {logoutPopupForSmallDevice()}
@@ -173,7 +172,7 @@ const Header = props => {
                 onClick={onChangeDarkMode}
                 data-testid="theme"
               >
-                {isDarkMode ? <BsSun /> : <FaMoon />}
+                {isDarkMode ? <BiSun /> : <FaMoon />}
               </DarkModeButton>
               <ProfileImage
                 isDarkMode={isDarkMode}

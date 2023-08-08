@@ -46,6 +46,7 @@ export const DarkModeButton = styled.button`
   color: ${props => (props.isDarkMode ? '#ffffff' : '#000000')};
   outline: none;
   border: none;
+  cursor: pointer;
   background-color: transparent;
   @media screen and (max-width: 767px) {
     font-size: 24px;
@@ -56,6 +57,7 @@ export const ProfileImage = styled.img`
   width: 40px;
   height: 40px;
   margin-left: 20px;
+  cursor: pointer;
 `
 
 export const LogoutButton = styled.button`
@@ -67,6 +69,7 @@ export const LogoutButton = styled.button`
   font-weight: 600;
   border-radius: 10px;
   margin-left: 20px;
+  cursor: pointer;
   @media screen and (max-width: 767px) {
     border: none;
     outline: none;
@@ -86,6 +89,7 @@ export const MenuButton = styled.button`
   outline: none;
   border: none;
   background-color: transparent;
+  cursor: pointer;
   font-size: 30px;
   color: ${props => (props.isDarkMode ? '#ffffff' : '#0f0f0f')};
 `
@@ -140,6 +144,7 @@ export const CancelButton = styled.button`
   padding: 10px;
   font-size: 12px;
   font-weight: 600;
+  cursor: pointer;
 `
 export const ConfirmButton = styled.button`
   outline: none;
@@ -151,4 +156,5 @@ export const ConfirmButton = styled.button`
   font-size: 12px;
   font-weight: 600;
   margin-left: 20px;
+  cursor: pointer;
 `

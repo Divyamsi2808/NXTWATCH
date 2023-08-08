@@ -25,15 +25,6 @@ class LoginRout extends Component {
     errorOccurred: false,
   }
 
-  onChangePassword = event => this.setState({password: event.target.value})
-
-  onChangeUserName = event => this.setState({username: event.target.value})
-
-  onChangePasswordType = () =>
-    this.setState(prevState => ({
-      passwordType: prevState.passwordType === 'password' ? 'text' : 'password',
-    }))
-
   onSubmitSuccess = jwtToken => {
     const {history} = this.props
     this.setState({errorOccurred: false})
@@ -64,6 +55,15 @@ class LoginRout extends Component {
       this.onSubmitFailure(data.error_msg)
     }
   }
+
+  onChangePassword = event => this.setState({password: event.target.value})
+
+  onChangeUserName = event => this.setState({username: event.target.value})
+
+  onChangePasswordType = () =>
+    this.setState(prevState => ({
+      passwordType: prevState.passwordType === 'password' ? 'text' : 'password',
+    }))
 
   renderLoginPage = () => {
     const {

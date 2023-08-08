@@ -5,6 +5,7 @@ export const BackgroundContainer = styled.div`
   display: flex;
   flex-direction: column;
   width: 100%;
+  min-height: 100vh;
   background-color: ${props => (props.isDarkMode ? '#181818' : '#f9f9f9')};
 `
 export const ContentContainer = styled.div`
@@ -13,14 +14,12 @@ export const ContentContainer = styled.div`
   flex-grow: 1;
 `
 
-export const VideosSectionContainer = styled.li`
+export const VideosSectionContainer = styled.div`
   display: flex;
   flex-direction: column;
-  width: 80%;
   padding: 10px;
-  @media screen and (max-width: 767px) {
-    width: 100%;
-  }
+  width: 70%;
+  flex-grow: 1;
 `
 
 export const VideoSection = styled.div`
@@ -58,6 +57,7 @@ export const BannerButtonElement = styled.button`
   background-color: transparent;
   align-self: flex-start;
   outline: none;
+  cursor: pointer;
 `
 
 export const BannerCloseButton = styled.button`
@@ -66,6 +66,7 @@ export const BannerCloseButton = styled.button`
   border: none;
   outline: none;
   align-self: flex-end;
+  cursor: pointer;
 `
 
 export const SearchInputContainer = styled.div`
@@ -103,6 +104,7 @@ export const SearchButton = styled.button`
   padding: 5px;
   outline: none;
   border: none;
+  cursor: pointer;
   border-left: 2px solid ${props => (props.isDarkMode ? '#cccccc' : '#d7dfe9')};
   background-color: ${props => (props.isDarkMode ? '#424242' : '#f1f1f1')};
   color: ${props => (props.isDarkMode ? '#ffffff' : '#0f0f0f')};
@@ -115,8 +117,7 @@ export const AllVideosContainer = styled.ul`
   width: 100%;
   flex-wrap: wrap;
   align-items: center;
-  justify-content: space-evenly;
-  height: 70vh;
+  flex-grow: 1;
   overflow-y: auto;
   @media screen and (max-width: 767px) {
     flex-direction: column;
@@ -194,6 +195,7 @@ export const OtherCaseContainer = styled.div`
   flex-direction: column;
   align-items: center;
   padding: 20px;
+  min-height: 100vh;
 `
 
 export const OtherCaseImage = styled.img`

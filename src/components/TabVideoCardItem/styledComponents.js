@@ -15,7 +15,8 @@ export const VideoContainer = styled.li`
 `
 
 export const VideoThumbnail = styled.img`
-  width: 50%;
+  width: 30%;
+  height: 200px;
 `
 
 export const VideoContentContainer = styled.div`

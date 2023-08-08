@@ -1,13 +1,11 @@
 import styled from 'styled-components'
 
 export const SideBarContainer = styled.div`
-  background-color: ${props => (props.isDarkMode ? '#181818 ' : '#ffffff')};
+  background-color: ${props => (props.isDarkMode ? '#181818 ' : 'transparent')};
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
-  width: 16%;
-  height: 100vh;
-  padding-left: 10px;
+  width: 18%;
+  min-height: 100vh;
   @media screen and (max-width: 767px) {
     display: none;
   }
@@ -16,6 +14,7 @@ export const SideBarContainer = styled.div`
 export const ContactUsSection = styled.div`
   color: ${props => (props.isDarkMode ? '#f9f9f9' : '#212121')};
   margin-left: 10px;
+  margin-top: 40vh;
 `
 
 export const ContactUsText = styled.p`

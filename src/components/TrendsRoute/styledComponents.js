@@ -4,6 +4,7 @@ export const BackgroundContainer = styled.div`
   display: flex;
   flex-direction: column;
   width: 100%;
+  min-height: 100vh;
   background-color: ${props => (props.isDarkMode ? '#0f0f0f' : '#f9f9f9')};
 `
 export const ContentContainer = styled.div`
@@ -15,10 +16,8 @@ export const ContentContainer = styled.div`
 
 export const SuccessViewContainer = styled.div`
   background-color: black;
-  width: 80%;
-  @media screen and (max-width: 767px) {
-    width: 100%;
-  }
+  width: 70%;
+  flex-grow: 1;
 `
 export const AllVideosContainer = styled.ul`
   list-style: none;
@@ -38,10 +37,10 @@ export const AllVideosContainer = styled.ul`
 export const OtherCaseContainer = styled.div`
   display: flex;
   flex-direction: column;
-  width: 80%;
   align-items: center;
   padding: 20px;
   text-align: center;
+  flex-grow: 1;
 `
 
 export const OtherCaseImage = styled.img`
@@ -68,18 +67,12 @@ export const OtherCaseButton = styled.button`
   outline: none;
   background-color: #3b82f6;
   border-radius: 10px;
-  @media screen and (max-width: 767px) {
-    width: 100%;
-  }
 `
 export const LoaderContainer = styled.div`
   color: #4f46e5;
-  width: 80%;
   height: 50vh;
   display: flex;
   align-items: center;
   justify-content: center;
-  @media screen and (max-width: 767px) {
-    width: 100%;
-  }
+  flex-grow: 1;
 `

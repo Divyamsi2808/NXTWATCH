@@ -4,6 +4,7 @@ export const BackgroundContainer = styled.div`
   display: flex;
   flex-direction: column;
   width: 100%;
+  min-height: 100vh;
   background-color: ${props => (props.isDarkMode ? '#181818' : '#f9f9f9')};
 `
 export const ContentContainer = styled.div`

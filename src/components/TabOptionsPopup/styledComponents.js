@@ -9,8 +9,8 @@ export const PopupMenuContainer = styled.div`
   flex-direction: column;
   align-items: center;
   border-radius: 10px;
-  padding: 20px;
-  width: 300px;
+  padding: 10px;
+  width: 100%;
   box-shadow: 1px 1px 4px 4px
     ${props => (props.isDarkMode ? '#000000' : '#e2e8f0')};
   @media screen and (min-width: 767px) {

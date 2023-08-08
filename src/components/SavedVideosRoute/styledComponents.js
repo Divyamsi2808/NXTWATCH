@@ -4,6 +4,7 @@ export const BackgroundContainer = styled.div`
   display: flex;
   flex-direction: column;
   width: 100%;
+  min-height: 100vh;
   background-color: ${props => (props.isDarkMode ? '#0f0f0f' : '#f9f9f9')};
 `
 export const ContentContainer = styled.div`
@@ -14,11 +15,9 @@ export const ContentContainer = styled.div`
 `
 
 export const SuccessViewContainer = styled.div`
-  width: 80%;
   background-color: black;
-  @media screen and (max-width: 767px) {
-    width: 100%;
-  }
+  width: 60%;
+  flex-grow: 1;
 `
 
 export const AllVideosContainer = styled.ul`
@@ -40,13 +39,9 @@ export const OtherCaseContainer = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 20px;
   text-align: center;
-  height: 100vh;
-  width: 80%;
-  @media screen and (max-width: 767px) {
-    width: 100%;
-  }
+  width: 60%;
+  flex-grow: 1;
 `
 
 export const OtherCaseImage = styled.img`

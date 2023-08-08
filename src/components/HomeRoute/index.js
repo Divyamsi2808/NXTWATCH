@@ -116,9 +116,11 @@ class HomeRoute extends Component {
             </BannerCloseButton>
             <BannerLogo
               src="https://assets.ccbp.in/frontend/react-js/nxt-watch-logo-light-theme-img.png"
-              alt="nxt watch logo"
+              alt="website logo"
             />
-            <BannerText>Buy NxtWatch Premium prepaid plans with UPI</BannerText>
+            <BannerText>
+              Buy Nxt Watch Premium prepaid plans with UPI
+            </BannerText>
             <BannerButtonElement type="button">GET IT NOW</BannerButtonElement>
           </BannerSectionContainer>
         )}
